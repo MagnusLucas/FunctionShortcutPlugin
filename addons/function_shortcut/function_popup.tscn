@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://btgsopoj31lnb"]
+
+[ext_resource type="Script" uid="uid://b3el5nh22s13y" path="res://addons/function_shortcut/function_popup.gd" id="1_cbsvp"]
+
+[node name="FunctionPopup" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cbsvp")
+
+[node name="FunctionName" type="LineEdit" parent="."]
+layout_mode = 2
+focus_neighbor_right = NodePath("../FunctionType")
+focus_neighbor_bottom = NodePath("../FunctionType")
+focus_next = NodePath("../FunctionType")
+placeholder_text = "fun_name"
+
+[node name="FunctionType" type="LineEdit" parent="."]
+layout_mode = 2
+focus_neighbor_left = NodePath("../FunctionName")
+focus_neighbor_top = NodePath("../FunctionName")
+focus_neighbor_right = NodePath("../Confirm")
+focus_neighbor_bottom = NodePath("../Confirm")
+focus_next = NodePath("../Confirm")
+focus_previous = NodePath("../FunctionName")
+placeholder_text = "void"
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 2
+focus_neighbor_left = NodePath("../FunctionType")
+focus_neighbor_top = NodePath("../FunctionType")
+focus_neighbor_right = NodePath("../FunctionName")
+focus_neighbor_bottom = NodePath("../FunctionName")
+focus_next = NodePath("../FunctionName")
+focus_previous = NodePath("../FunctionType")
+text = "Confirm"
