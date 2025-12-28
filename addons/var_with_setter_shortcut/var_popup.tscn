@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7s0oaaq1b2wp"]
+
+[ext_resource type="Script" uid="uid://dchcd6h31f7cx" path="res://addons/var_with_setter_shortcut/var_popup.gd" id="1_6iorr"]
+
+[node name="VarPopup" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6iorr")
+
+[node name="VarName" type="LineEdit" parent="."]
+layout_mode = 2
+focus_neighbor_right = NodePath("../VarType")
+focus_neighbor_bottom = NodePath("../VarType")
+focus_next = NodePath("../VarType")
+placeholder_text = "var_name"
+
+[node name="VarType" type="LineEdit" parent="."]
+layout_mode = 2
+focus_neighbor_left = NodePath("../VarName")
+focus_neighbor_top = NodePath("../VarName")
+focus_neighbor_right = NodePath("../Confirm")
+focus_neighbor_bottom = NodePath("../Confirm")
+focus_next = NodePath("../Confirm")
+focus_previous = NodePath("../VarName")
+placeholder_text = "int"
+
+[node name="Confirm" type="Button" parent="."]
+layout_mode = 2
+focus_neighbor_left = NodePath("../VarType")
+focus_neighbor_top = NodePath("../VarType")
+focus_neighbor_right = NodePath("../VarName")
+focus_neighbor_bottom = NodePath("../VarName")
+focus_next = NodePath("../VarName")
+focus_previous = NodePath("../VarType")
+text = "Confirm"
